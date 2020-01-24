@@ -43,8 +43,9 @@ elif escolha == 3:
 elif escolha == 4:
 	num1 = int(input('\nDigite o primeiro número : '))
 	num2 = int(input('\nDigite o segundo número : '))
-	print('\n')
-	print(num1,'/', num2, '=',divide(num1,num2))	
-
+	try:
+		print(num1,'/',num2,'=',divide(num1,num2))
+	except ZeroDivisionError:
+		print('\nVocê não pode dividir um número por 0')
 else:
 	print('\nOpção inválida!')
